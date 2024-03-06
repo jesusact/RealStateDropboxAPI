@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real State</title>
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs"
+            data-app-key="yb8rfg91tfywajg"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        body {
+            font-family: "Playfair Display", serif;
+            text-align: center;
+            background-color: #0F1B29;
+            color: white;
+        }
+
+        #container {
+            margin: auto;
+            width: 20rem;
+            text-align: center;
+            padding-top: 20px;
+        }
+        img{
+            width: 150px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+<img src="_78f348fc-2aa8-4b1f-b84a-845ba57fc3ef.jpeg">
+<h1>Real State Luxury</h1>
+<p>Envíe fotos de su propiedad y tasaremos su valor.</p>
+<div id="container">
+
+</div>
+</body>
+</html>
+
+<script>
+
+    options = {
+
+        success: function (files) {
+            alert("Here's the file link: " + files[0].link)
+        },
+
+        cancel: function () {
+
+        },
+
+        linkType: "preview",
+
+        multiselect: true,
+
+        extensions: ['.png', '.jpg'],
+
+        folderselect: true,
+
+    };
+
+    let button = Dropbox.createChooseButton(options);
+    document.getElementById("container").appendChild(button);
+
+    file = {
+        id: "id:...",
+
+        name: "filename.txt",
+
+        link: "https://...",
+
+        bytes: 464,
+
+        icon: "https://...",
+
+        thumbnailLink: "https://...?bounding_box=75&mode=fit",
+
+        isDir: false,
+    };
+
+</script>
